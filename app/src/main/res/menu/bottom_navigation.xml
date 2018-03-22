@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/action_search"
+        android:title="Home"
+        android:icon="@drawable/picture_box" />
+    <item android:id="@+id/action_settings"
+        android:title="Events"
+        android:icon="@drawable/ic_arrow_back_black_24dp" />
+    <item android:id="@+id/action_navigation"
+        android:title="Notifications"
+        android:icon="@drawable/ic_menu_camera" />
+
+</menu>
