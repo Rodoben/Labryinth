@@ -23,10 +23,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <de.hdodenhof.circleimageview.CircleImageView
+            <com.example.ronaldbenjamin.labryinth.CircleImageView
                 android:id="@+id/blog_user_image"
-                android:layout_width="67dp"
-                android:layout_height="60dp"
+                android:layout_width="57dp"
+                android:layout_height="55dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:src="@drawable/picture_box"
@@ -52,15 +52,16 @@
                 android:layout_marginTop="2dp"
                 android:text="Blog Post Date"
                 app:layout_constraintStart_toEndOf="@+id/blog_user_image"
-                app:layout_constraintTop_toBottomOf="@+id/textView6" />
+                app:layout_constraintTop_toBottomOf="@+id/blog_user_name" />
 
             <ImageView
                 android:id="@+id/blog_image"
                 android:layout_width="0dp"
-                android:layout_height="159dp"
-                android:layout_marginTop="16dp"
+                android:layout_height="195dp"
+                android:layout_marginTop="32dp"
                 android:scaleType="fitXY"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/blog_user_image"
                 app:srcCompat="@drawable/cast_album_art_placeholder" />
@@ -69,12 +70,11 @@
                 android:id="@+id/blog_desc"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
                 android:layout_marginEnd="8dp"
-                android:layout_marginTop="16dp"
                 android:text="kvnvv  ifjvei vev everv 0erv er verv e ve-vjspvjspvsiov sovsdvd dvdivdd dv dv div"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/blog_image" />
 

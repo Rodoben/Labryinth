@@ -33,7 +33,7 @@ import com.theartofdev.edmodo.cropper.CropImageView;
 import java.util.HashMap;
 import java.util.Map;
 
-import de.hdodenhof.circleimageview.CircleImageView;
+
 
 public class Acc_Setup extends AppCompatActivity {
     private CircleImageView setupimage;

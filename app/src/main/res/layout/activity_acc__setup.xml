@@ -7,7 +7,7 @@
     tools:context="com.example.ronaldbenjamin.labryinth.Acc_Setup">
 
 
-    <de.hdodenhof.circleimageview.CircleImageView
+    <com.example.ronaldbenjamin.labryinth.CircleImageView
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/setup_image"
         android:layout_width="226dp"

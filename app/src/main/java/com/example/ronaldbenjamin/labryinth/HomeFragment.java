@@ -62,19 +62,14 @@ private  BlogRecyclerAdapter blogRecyclerAdapter;
           firebaseFirestore.collection("Post").addSnapshotListener(new EventListener<QuerySnapshot>() {
               @Override
               public void onEvent(QuerySnapshot documentSnapshots, FirebaseFirestoreException e) {
-                  Toast.makeText(getActivity(),
-                          "Event entered",
-                          Toast.LENGTH_SHORT).show();
+
 
                   for (DocumentChange doc : documentSnapshots.getDocumentChanges()){
-                      Toast.makeText(getActivity(),
-                              "Event document",
-                              Toast.LENGTH_SHORT).show();
+
+
                       if (doc.getType()==DocumentChange.Type.ADDED){
                           BlogPost blogPost=doc.getDocument().toObject(BlogPost.class);
-                          Toast.makeText(getActivity(),
-                                  "Event added",
-                                  Toast.LENGTH_SHORT).show();
+
 
                           blog_List.add(blogPost);
 
@@ -87,9 +82,7 @@ private  BlogRecyclerAdapter blogRecyclerAdapter;
                                   Toast.LENGTH_SHORT).show();
                       }
                   }
-                  Toast.makeText(getActivity(),
-                          "Event out",
-                          Toast.LENGTH_SHORT).show();
+                 
 
 
               }

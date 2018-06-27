@@ -34,6 +34,7 @@ public class HomePage extends AppCompatActivity
    private BottomNavigationView mainbottomNav;
    private HomeFragment homeFragment;
    private NotificationFragment notificationFragment;
+   private ContactFragment contactFragment;
    private AccountFragment accountFragment;
    private NotiFragment notiFragment;
 
@@ -55,6 +56,7 @@ private  String current_user_id;
         notificationFragment= new NotificationFragment();
         accountFragment=new AccountFragment();
         notiFragment=new NotiFragment();
+        contactFragment=new ContactFragment();
         replaceFragment(homeFragment);
 
         mainbottomNav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -172,8 +174,7 @@ private  String current_user_id;
 
         }
         else if (id==R.id.nav_enquiry) {
-            startActivity(new Intent(HomePage.this,Enquiry.class));
-            finish();
+           replaceFragment(contactFragment);
 
         }
         else if (id==R.id.nav_projects){

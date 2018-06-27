@@ -18,7 +18,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.List;
 
-import de.hdodenhof.circleimageview.CircleImageView;
+
 
 /**
  * Created by Ronald Benjamin on 20-Mar-18.
