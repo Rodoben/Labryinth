@@ -10,8 +10,13 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:background="#ffffff"
         app:cardBackgroundColor="@color/cardview_light_background"
+        app:cardElevation="5dp"
+        app:contentPadding="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -23,42 +28,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <com.example.ronaldbenjamin.labryinth.CircleImageView
-                android:id="@+id/blog_user_image"
-                android:layout_width="57dp"
-                android:layout_height="55dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:src="@drawable/picture_box"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/blog_user_name"
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:layout_marginStart="12dp"
-                android:layout_marginTop="16dp"
-                android:text="Username"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/blog_user_image"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/blog_date"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="2dp"
-                android:text="Blog Post Date"
-                app:layout_constraintStart_toEndOf="@+id/blog_user_image"
-                app:layout_constraintTop_toBottomOf="@+id/blog_user_name" />
 
             <ImageView
                 android:id="@+id/blog_image"
                 android:layout_width="0dp"
-                android:layout_height="300dp"
-                android:layout_marginTop="8dp"
+                android:layout_height="195dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
                 android:scaleType="fitXY"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -71,8 +48,9 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
-                android:layout_marginStart="16dp"
                 android:text="kvnvv  ifjvei vev everv 0erv er verv e ve-vjspvjspvsiov sovsdvd dvdivdd dv dv div"
+                android:textAlignment="center"
+                android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"

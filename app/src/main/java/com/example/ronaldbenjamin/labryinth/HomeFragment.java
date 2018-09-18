@@ -77,8 +77,7 @@ private  BlogRecyclerAdapter blogRecyclerAdapter;
 
                       }else {
                           Log.w(TAG, "Error adding event document", e);
-                          Toast.makeText(getActivity(),
-                                  "Event document could not be added",
+                          Toast.makeText(getContext(),"Event document could not be added",
                                   Toast.LENGTH_SHORT).show();
                       }
                   }

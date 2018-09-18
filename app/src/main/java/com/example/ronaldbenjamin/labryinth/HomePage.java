@@ -151,6 +151,7 @@ private  String current_user_id;
 
 
         if (id == R.id.nav_home) {
+            replaceFragment(homeFragment);
 
 
 
@@ -183,7 +184,7 @@ private  String current_user_id;
 
 
         }
-        else if (id==R.id.nav_share){
+   else if (id==R.id.nav_share){
             mAuth.signOut();
             startActivity(new Intent(HomePage.this,LoginPage.class));
             finish();

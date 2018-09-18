@@ -10,7 +10,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.RequestOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -18,34 +17,29 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.List;
 
-
-
-/**
- * Created by Ronald Benjamin on 20-Mar-18.
- */
-
-public class BlogRecyclerAdapter extends RecyclerView.Adapter<BlogRecyclerAdapter.ViewHolder> {
+public class EventRecyclerAdapter extends RecyclerView.Adapter<EventRecyclerAdapter.ViewHolder> {
 
     public List<BlogPost> blog_List;
-    public static Context context;
+    public Context context;
     private FirebaseFirestore firebaseFirestore;
 
-    public BlogRecyclerAdapter(List<BlogPost> blog_List) {
+    public EventRecyclerAdapter(List<BlogPost> blog_List) {
         this.blog_List = blog_List;
     }
 
     @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.blog_list_item, parent, false);
+    public EventRecyclerAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.event_list_item, parent, false);
         context = parent.getContext();
         firebaseFirestore = FirebaseFirestore.getInstance();
-        return new ViewHolder(view);
+        return new EventRecyclerAdapter.ViewHolder(view);
 
     }
 
+
     @Override
-    public void onBindViewHolder(@NonNull final ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull final EventRecyclerAdapter.ViewHolder holder, int position) {
 
         String desc_data = blog_List.get(position).getDesc();
         holder.setDesc(desc_data);
@@ -62,7 +56,7 @@ public class BlogRecyclerAdapter extends RecyclerView.Adapter<BlogRecyclerAdapte
 
                     String userName = task.getResult().getString("name");
                     String userImage = task.getResult().getString("image");
-                    holder.setUserData(userName,userImage);
+                 //   holder.setUserData(userName,userImage);
 
                 }
                 else {
@@ -80,12 +74,12 @@ public class BlogRecyclerAdapter extends RecyclerView.Adapter<BlogRecyclerAdapte
         return blog_List.size();
     }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder {
 
         public View mView;
         public ImageView blogImageView;
-        public CircleImageView blogUserImage;
-        public TextView blogUserName;
+
+
 
 
         public ViewHolder(View itemView) {
@@ -105,19 +99,19 @@ public class BlogRecyclerAdapter extends RecyclerView.Adapter<BlogRecyclerAdapte
             Glide.with(context.getApplicationContext()).load(downloadUri).into(blogImageView);
         }
 
-        public void setUserData(String name, String image) {
+      //  public void setUserData(String name, String image) {
 
-            blogUserImage = mView.findViewById(R.id.blog_user_image);
-            blogUserName = mView.findViewById(R.id.blog_user_name);
-
-            blogUserName.setText(name);
-
-            RequestOptions placeholderOption = new RequestOptions();
-            placeholderOption.placeholder(R.drawable.picture_box);
-
-            Glide.with(context.getApplicationContext()).applyDefaultRequestOptions(placeholderOption).load(image).into(blogUserImage);
+         //   blogUserImage = mView.findViewById(R.id.blog_user_image);
+           //   blogUserName = mView.findViewById(R.id.blog_user_name);
 
 
-        }
+
+           // RequestOptions placeholderOption = new RequestOptions();
+        //    placeholderOption.placeholder(R.drawable.picture_box);
+
+        //    Glide.with(context.getApplicationContext()).applyDefaultRequestOptions(placeholderOption).load(image).into(blogUserImage);
+
+
+      //  }
     }
 }
